@@ -7,6 +7,7 @@ public class Main {
 
         Coach coach1 = new Coach("Смирнов", "Кирилл", "Александрович");
         Coach coach2 = new Coach("Матвеев", "Антон", "Резалин");
+        Coach coach3 = new Coach("Павлов", "Василий", "Иванов");
 
         Group group1 = new Group("Йога", Age.ADULT, 60);
         Group group2 = new Group("Художественная гимнатсика", Age.CHILD, 45);
@@ -20,7 +21,7 @@ public class Main {
         timetable.addNewTrainingSession(new TrainingSession(group1, coach1, DayOfWeek.FRIDAY, new TimeOfDay(18, 0)));
         timetable.addNewTrainingSession(new TrainingSession(group2, coach2, DayOfWeek.SATURDAY, new TimeOfDay(10, 0)));
         timetable.addNewTrainingSession(new TrainingSession(group3, coach1, DayOfWeek.SATURDAY, new TimeOfDay(11, 0)));
-
+        timetable.addNewTrainingSession(new TrainingSession(group3, coach3, DayOfWeek.MONDAY, new TimeOfDay(21, 0)));
         System.out.println("Расписание на понедельник: ");
         List<TrainingSession> mondaySessions = timetable.getTrainingSessionsForDay(DayOfWeek.MONDAY);
         for (TrainingSession session : mondaySessions) {
